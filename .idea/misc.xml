@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.18541666666666667" />
+        <entry key="app/src/main/res/drawable/ic_baseline_event_note_24.xml" value="0.1859375" />
+        <entry key="app/src/main/res/drawable/image.xml" value="0.1046875" />
+        <entry key="app/src/main/res/drawable/lbl2.xml" value="0.1859375" />
+        <entry key="app/src/main/res/drawable/lbl3.xml" value="0.1859375" />
+        <entry key="app/src/main/res/drawable/lbl4.xml" value="0.1484375" />
+        <entry key="app/src/main/res/drawable/lbl5.xml" value="0.1859375" />
+        <entry key="app/src/main/res/drawable/lbl6.xml" value="0.1859375" />
+        <entry key="app/src/main/res/drawable/note.xml" value="0.1046875" />
+        <entry key="app/src/main/res/drawable/setting.xml" value="0.1046875" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_logup.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/body_profile_recycler.xml" value="0.20304568527918782" />
+        <entry key="app/src/main/res/layout/fragment_image.xml" value="0.15670289855072464" />
+        <entry key="app/src/main/res/layout/fragment_note.xml" value="0.15670289855072464" />
+        <entry key="app/src/main/res/layout/fragment_setting.xml" value="0.15" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.15462962962962962" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

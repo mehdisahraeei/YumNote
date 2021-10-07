@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/body"
+        tools:context=".SignupActivity">
+
+
+        <ImageView
+            android:id="@+id/firsticon"
+            android:layout_width="@dimen/_150mdp"
+            android:layout_height="@dimen/_60mdp"
+            android:src="@drawable/firsticon"
+            app:layout_constraintBottom_toTopOf="@+id/loginbd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.528" />
+
+
+        <ImageView
+            android:id="@+id/loginbd"
+            android:layout_width="@dimen/_225mdp"
+            android:layout_height="@dimen/_215mdp"
+            android:layout_marginStart="@dimen/_73mdp"
+            android:layout_marginEnd="@dimen/_73mdp"
+            android:background="@drawable/loginbd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.47" />
+
+
+        <ImageView
+            android:id="@+id/_edit1"
+            android:layout_width="@dimen/_175mdp"
+            android:layout_height="@dimen/_32mdp"
+            android:layout_marginTop="@dimen/_21mdp"
+            android:background="@drawable/edit_text4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/loginbd" />
+
+        <ImageView
+            android:id="@+id/_edit2"
+            android:layout_width="@dimen/_175mdp"
+            android:layout_height="@dimen/_32mdp"
+            android:layout_marginTop="@dimen/_13mdp"
+            android:background="@drawable/edit_text2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/_edit1" />
+
+        <ImageView
+            android:id="@+id/edit3"
+            android:layout_width="@dimen/_175mdp"
+            android:layout_height="@dimen/_32mdp"
+            android:layout_marginTop="@dimen/_13mdp"
+            android:background="@drawable/edit_text3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/_edit2" />
+
+        <ImageView
+            android:id="@+id/edit4"
+            android:layout_width="@dimen/_175mdp"
+            android:layout_height="@dimen/_32mdp"
+            android:layout_marginTop="@dimen/_13mdp"
+            android:background="@drawable/edit_text1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit3" />
+
+        <ImageView
+            android:id="@+id/objectlogup"
+            android:layout_width="207dp"
+            android:layout_height="22dp"
+            android:src="@drawable/lbl3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginbtn"
+            app:layout_constraintVertical_bias="0.110000014" />
+
+
+        <EditText
+            android:id="@+id/editlogup1"
+            android:layout_width="@dimen/_145mdp"
+            android:layout_height="@dimen/_23mdp"
+            android:background="@drawable/body_white"
+            android:gravity="center"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/_10font_mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/_edit1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/_edit1"
+            app:layout_constraintVertical_bias="0.45999998" />
+
+
+        <EditText
+            android:id="@+id/editlogup2"
+            android:layout_width="@dimen/_145mdp"
+            android:layout_height="@dimen/_23mdp"
+            android:background="@drawable/body_white"
+            android:gravity="center"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/_10font_mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/_edit2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/_edit2" />
+
+
+        <EditText
+            android:id="@+id/editlogup3"
+            android:layout_width="@dimen/_145mdp"
+            android:layout_height="@dimen/_23mdp"
+            android:background="@drawable/body_white"
+            android:gravity="center"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/_10font_mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit3" />
+
+
+        <EditText
+            android:id="@+id/editlogup4"
+            android:layout_width="@dimen/_145mdp"
+            android:layout_height="@dimen/_23mdp"
+            android:background="@drawable/body_white"
+            android:gravity="center"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/_10font_mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit4" />
+
+
+        <ImageView
+            android:id="@+id/unhidelogup1"
+            android:layout_width="@dimen/_17mdp"
+            android:layout_height="@dimen/_19mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit3" />
+
+
+        <ImageView
+            android:id="@+id/unhidelogup2"
+            android:layout_width="@dimen/_17mdp"
+            android:layout_height="@dimen/_19mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit4" />
+
+        <ImageView
+            android:id="@+id/loginbtn"
+            android:layout_width="@dimen/_244mdp"
+            android:layout_height="@dimen/_36mdp"
+            android:background="@drawable/lbl4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginbd"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

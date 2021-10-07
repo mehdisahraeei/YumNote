@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/body"
+        tools:context=".LoginActivity">
+
+
+        <TextView
+            android:id="@+id/Obj_null"
+            android:layout_width="@dimen/_200mdp"
+            android:layout_height="@dimen/_75mdp"
+            android:layout_marginBottom="256dp"
+            app:layout_constraintBottom_toTopOf="@+id/_edit1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/firsticon"
+            android:layout_width="@dimen/_150mdp"
+            android:layout_height="@dimen/_60mdp"
+            android:layout_marginTop="@dimen/_80mdp"
+            android:src="@drawable/firsticon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Obj_null" />
+
+
+        <ImageView
+            android:id="@+id/loginbd"
+            android:layout_width="@dimen/_200mdp"
+            android:layout_height="@dimen/_130mdp"
+            android:background="@drawable/loginbd"
+            app:layout_constraintBottom_toTopOf="@+id/loginbtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firsticon"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/_edit1"
+            android:layout_width="@dimen/_174mdp"
+            android:layout_height="@dimen/_33mdp"
+            android:layout_marginBottom="@dimen/_13mdp"
+            android:background="@drawable/edit_text1"
+            app:layout_constraintBottom_toTopOf="@+id/_edit2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Obj_null" />
+
+
+        <ImageView
+            android:id="@+id/_edit2"
+            android:layout_width="@dimen/_174mdp"
+            android:layout_height="@dimen/_33mdp"
+            android:layout_marginBottom="@dimen/_20mdp"
+            android:background="@drawable/edit_text2"
+            app:layout_constraintBottom_toTopOf="@+id/loginbtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/_edit1" />
+
+
+        <EditText
+            android:id="@+id/edit_bd1"
+            android:layout_width="@dimen/_145mdp"
+            android:layout_height="@dimen/_23mdp"
+            android:layout_marginBottom="@dimen/_5mdp"
+            android:background="@drawable/body_green"
+            android:gravity="center"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/_10font_mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/_edit1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_bd2"
+            android:layout_width="@dimen/_145mdp"
+            android:layout_height="@dimen/_23mdp"
+            android:layout_marginBottom="@dimen/_5mdp"
+            android:background="@drawable/body_orange"
+            android:gravity="center"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/_10font_mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/_edit2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/loginbtn"
+            android:layout_width="@dimen/_226mdp"
+            android:layout_height="@dimen/_36mdp"
+            android:layout_marginStart="@dimen/_48mdp"
+            android:layout_marginEnd="@dimen/_50mdp"
+            android:layout_marginBottom="@dimen/_1mdp"
+            android:background="@drawable/lbl1"
+            app:layout_constraintBottom_toTopOf="@+id/objectlogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/_edit2" />
+
+
+        <ImageView
+            android:id="@+id/objectlogin"
+            android:layout_width="@dimen/_155mdp"
+            android:layout_height="@dimen/_34mdp"
+            android:layout_marginBottom="@dimen/_260mdp"
+            android:src="@drawable/lbl2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginbtn" />
+
+
+        <ImageView
+            android:id="@+id/unhidelogin"
+            android:layout_width="@dimen/_17mdp"
+            android:layout_height="@dimen/_19mdp"
+            android:layout_marginTop="@dimen/_9mdp"
+            android:layout_marginEnd="@dimen/_6mdp"
+            android:layout_marginBottom="@dimen/_7mdp"
+            app:layout_constraintBottom_toBottomOf="@+id/_edit2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.72"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/_edit2"
+            app:layout_constraintVertical_bias="0.52" />
+
+
+        <CheckBox
+            android:id="@+id/check1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="683dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Obj_null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
