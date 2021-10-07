@@ -4,11 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
+    <data>
+
+        <variable
+            name="SignUp"
+            type="com.mahdi.yumnote.ui.signup.SignUpViewmodel" />
+
+
+        <variable
+            name="SignUpClick"
+            type="com.mahdi.yumnote.ui.signup.clicks.SignUpClicks" />
+
+
+        <variable
+            name="SignUpClickHelper"
+            type="com.mahdi.yumnote.ui.signup.clicks.SignUpHelper" />
+
+
+    </data>
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/body"
-        tools:context=".SignupActivity">
+        tools:context=".ui.signup.SignupActivity">
 
 
         <ImageView
@@ -82,6 +102,7 @@
             android:id="@+id/objectlogup"
             android:layout_width="207dp"
             android:layout_height="22dp"
+            android:onClick="@{() -> SignUpClick.ClickLogin()}"
             android:src="@drawable/lbl3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -93,6 +114,7 @@
 
         <EditText
             android:id="@+id/editlogup1"
+            hintRes1="@{SignUp.userHint}"
             android:layout_width="@dimen/_145mdp"
             android:layout_height="@dimen/_23mdp"
             android:background="@drawable/body_white"
@@ -110,6 +132,7 @@
 
         <EditText
             android:id="@+id/editlogup2"
+            hintRes2="@{SignUp.emailHint}"
             android:layout_width="@dimen/_145mdp"
             android:layout_height="@dimen/_23mdp"
             android:background="@drawable/body_white"
@@ -126,6 +149,7 @@
 
         <EditText
             android:id="@+id/editlogup3"
+            hintRes3="@{SignUp.passHint}"
             android:layout_width="@dimen/_145mdp"
             android:layout_height="@dimen/_23mdp"
             android:background="@drawable/body_white"
@@ -142,6 +166,7 @@
 
         <EditText
             android:id="@+id/editlogup4"
+            hintRes4="@{SignUp.confirmHint}"
             android:layout_width="@dimen/_145mdp"
             android:layout_height="@dimen/_23mdp"
             android:background="@drawable/body_white"
@@ -158,6 +183,7 @@
 
         <ImageView
             android:id="@+id/unhidelogup1"
+            imageRes1="@{SignUp.imageHide}"
             android:layout_width="@dimen/_17mdp"
             android:layout_height="@dimen/_19mdp"
             app:layout_constraintBottom_toBottomOf="@+id/edit3"
@@ -169,6 +195,7 @@
 
         <ImageView
             android:id="@+id/unhidelogup2"
+            imageRes2="@{SignUp.imageHide}"
             android:layout_width="@dimen/_17mdp"
             android:layout_height="@dimen/_19mdp"
             app:layout_constraintBottom_toBottomOf="@+id/edit4"
@@ -182,13 +209,17 @@
             android:layout_width="@dimen/_244mdp"
             android:layout_height="@dimen/_36mdp"
             android:background="@drawable/lbl4"
+            android:onClick="@{(v) -> SignUpClickHelper.ClickSignup(v)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/loginbd"
             app:layout_constraintVertical_bias="0.0" />
 
+        <!--     or       android:onClick="@{LogupClickHelper::ClickSignup}"-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </layout>

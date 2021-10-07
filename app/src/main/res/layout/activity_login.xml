@@ -3,12 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="Login"
+            type="com.mahdi.yumnote.ui.login.LoginViewmodel" />
+
+        <variable
+            name="LoginClick"
+            type="com.mahdi.yumnote.ui.login.clicks.LoginClicks" />
+
+
+        <variable
+            name="LoginClickHelper"
+            type="com.mahdi.yumnote.ui.login.clicks.LoginHelper" />
+
+
+    </data>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/body"
-        tools:context=".LoginActivity">
+        tools:context=".ui.login.LoginActivity">
 
 
         <TextView
@@ -71,6 +89,7 @@
 
         <EditText
             android:id="@+id/edit_bd1"
+            Res1="@{Login.userHint}"
             android:layout_width="@dimen/_145mdp"
             android:layout_height="@dimen/_23mdp"
             android:layout_marginBottom="@dimen/_5mdp"
@@ -86,6 +105,7 @@
 
         <EditText
             android:id="@+id/edit_bd2"
+            Res2="@{Login.passHint}"
             android:layout_width="@dimen/_145mdp"
             android:layout_height="@dimen/_23mdp"
             android:layout_marginBottom="@dimen/_5mdp"
@@ -108,6 +128,7 @@
             android:layout_marginEnd="@dimen/_50mdp"
             android:layout_marginBottom="@dimen/_1mdp"
             android:background="@drawable/lbl1"
+            android:onClick="@{(v) -> LoginClickHelper.ClickLogin(v)}"
             app:layout_constraintBottom_toTopOf="@+id/objectlogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -119,6 +140,7 @@
             android:layout_width="@dimen/_155mdp"
             android:layout_height="@dimen/_34mdp"
             android:layout_marginBottom="@dimen/_260mdp"
+            android:onClick="@{() -> LoginClick.ClickSignUp()}"
             android:src="@drawable/lbl2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -128,6 +150,7 @@
 
         <ImageView
             android:id="@+id/unhidelogin"
+            imageResource="@{Login.imageHide}"
             android:layout_width="@dimen/_17mdp"
             android:layout_height="@dimen/_19mdp"
             android:layout_marginTop="@dimen/_9mdp"
@@ -143,11 +166,11 @@
 
         <CheckBox
             android:id="@+id/check1"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="28dp"
             android:layout_marginBottom="683dp"
-            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/Obj_null"
             app:layout_constraintStart_toStartOf="parent"
