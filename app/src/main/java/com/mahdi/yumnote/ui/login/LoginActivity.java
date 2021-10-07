@@ -15,8 +15,8 @@ import com.mahdi.yumnote.ui.login.clicks.LoginHelper;
 public class LoginActivity extends AppCompatActivity {
 
 
-
     private ActivityLoginBinding binding;
+
 
 
     @Override
@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+
 
 
 

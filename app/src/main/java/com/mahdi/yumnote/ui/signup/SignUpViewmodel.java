@@ -13,10 +13,11 @@ import com.mahdi.yumnote.model.viewmodel.SignUpModel;
 
 
 
+
 public class SignUpViewmodel extends ViewModel {
 
 
-//-----------------------------------------------------
+    //-----------------------------------------------------
     private static boolean state = false;
     private static EditText editUser, editEmail, editPass, editConfirm;
 
@@ -24,6 +25,9 @@ public class SignUpViewmodel extends ViewModel {
     public int imageHide;
 //-----------------------------------------------------
 
+
+    public SignUpViewmodel() {
+    }
 
 
 
@@ -37,11 +41,14 @@ public class SignUpViewmodel extends ViewModel {
 
 
 
+
     @BindingAdapter({"hintRes1"})
     public static void setUserHint(EditText editText1, String text) {
         editUser = editText1;
         editText1.setHint(text);
     }
+
+
 
 
     @BindingAdapter({"hintRes2"})
@@ -50,17 +57,23 @@ public class SignUpViewmodel extends ViewModel {
         editText2.setHint(text);
     }
 
+
+
     @BindingAdapter({"hintRes3"})
     public static void setPassHint(EditText editText3, String text) {
         editPass = editText3;
         editText3.setHint(text);
     }
 
+
+
     @BindingAdapter({"hintRes4"})
     public static void setConfirmHint(EditText editText4, String text) {
         editConfirm = editText4;
         editText4.setHint(text);
     }
+
+
 
 
     @BindingAdapter({"imageRes1"})
@@ -92,6 +105,8 @@ public class SignUpViewmodel extends ViewModel {
     }
 
 
+
+
     @BindingAdapter({"imageRes2"})
     public static void setImage2(ImageView imageView, int imgUrl) {
 
@@ -121,15 +136,18 @@ public class SignUpViewmodel extends ViewModel {
     }
 
 
+
     public String[] getValue() {
 
         String user = editUser.getText().toString();
         String email = editEmail.getText().toString();
         String pass = editPass.getText().toString();
+        String confirm = editConfirm.getText().toString();
 
 
-        return new String[]{user, email, pass};
+        return new String[]{user, email, pass, confirm};
     }
+
 
 
 
