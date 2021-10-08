@@ -1,7 +1,8 @@
-package com.mahdi.yumnote.rx.signup;
+package com.mahdi.yumnote.rx.login;
 
 
-import com.mahdi.yumnote.model.retrofit.SignupServer;
+import android.util.Log;
+import com.mahdi.yumnote.model.retrofit.LoginServer;
 import com.mahdi.yumnote.networking.retrofit.ApiServices;
 import com.mahdi.yumnote.networking.retrofit.RetrofitClient;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
@@ -13,28 +14,36 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 
 
 
-public class SignupRx {
-
-    private Observable<SignupServer> observable;
+public class LoginRx {
 
 
+    private Observable<LoginServer> observable;
 
 
-    public void Submit(String user , String email , String pass , String confirm ) {
+
+
+    public void Submit(String user, String pass) {
 
         ApiServices apiServices = RetrofitClient.getApiServices();
 
-        observable = apiServices.SignUpDoing(user,email,pass);
+        observable = apiServices.LoginDoing(user, pass);
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<SignupServer>() {
+                .subscribe(new Observer<LoginServer>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
 
                     }
 
                     @Override
-                    public void onNext(@NonNull SignupServer signupServer) {
+                    public void onNext(@NonNull LoginServer loginServer) {
+                        //next
+                        if (loginServer.getIsSuccess() == 1) {
+                            Log.i("runYum","ok");
+
+                        } else {
+                            Log.i("runYum","false");
+                        }
                     }
 
                     @Override
@@ -48,6 +57,7 @@ public class SignupRx {
                     }
                 });
     }
+
 
 
 

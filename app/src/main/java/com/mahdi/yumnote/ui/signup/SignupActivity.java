@@ -19,7 +19,7 @@ public class SignupActivity extends AppCompatActivity {
 
 
     private SignUpViewmodel logupViewmodel;
-    ActivitySignupBinding binding;
+    private ActivitySignupBinding binding;
 
 
 

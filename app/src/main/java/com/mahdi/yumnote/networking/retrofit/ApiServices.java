@@ -1,6 +1,7 @@
 package com.mahdi.yumnote.networking.retrofit;
 
 
+import com.mahdi.yumnote.model.retrofit.LoginServer;
 import com.mahdi.yumnote.model.retrofit.SignupServer;
 import io.reactivex.rxjava3.core.Observable;
 import retrofit2.http.Field;
@@ -18,7 +19,14 @@ public interface ApiServices {
 
     @FormUrlEncoded
     @POST("SignUp.php")
-    Observable<SignupServer> upload(@Field("user") String user, @Field("email") String email, @Field("pass") String pass);
+    Observable<SignupServer> SignUpDoing(@Field("user") String user, @Field("email") String email, @Field("pass") String pass);
+
+
+
+    @FormUrlEncoded
+    @POST("Login.php")
+    Observable<LoginServer> LoginDoing (@Field("userLogin") String user, @Field("passLogin") String pass);
+
 
 
 
