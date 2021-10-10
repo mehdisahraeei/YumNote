@@ -15,11 +15,12 @@
         <entry key="app/src/main/res/drawable/setting.xml" value="0.1046875" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_logup.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.1" />
         <entry key="app/src/main/res/layout/body_profile_recycler.xml" value="0.20304568527918782" />
         <entry key="app/src/main/res/layout/fragment_image.xml" value="0.15670289855072464" />
         <entry key="app/src/main/res/layout/fragment_note.xml" value="0.15670289855072464" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_setting.xml" value="0.15" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.15462962962962962" />
       </map>

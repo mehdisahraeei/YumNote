@@ -35,6 +35,7 @@ public class SignupRx {
 
                     @Override
                     public void onNext(@NonNull SignupServer signupServer) {
+                        //----ok----
                     }
 
                     @Override

@@ -1,6 +1,6 @@
 package com.mahdi.yumnote.ui.login;
 
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,9 +9,11 @@ import androidx.lifecycle.ViewModelProvider;
 import com.mahdi.yumnote.R;
 import com.mahdi.yumnote.databinding.ActivityLoginBinding;
 import com.mahdi.yumnote.model.viewmodel.LoginModel;
+import com.mahdi.yumnote.other.sharedpreferences.SharedPrefer;
 import com.mahdi.yumnote.rx.login.LoginRx;
 import com.mahdi.yumnote.ui.login.clicks.LoginClicks;
 import com.mahdi.yumnote.ui.login.clicks.LoginHelper;
+import com.mahdi.yumnote.ui.main.activity.MainActivity;
 
 
 
@@ -19,7 +21,8 @@ import com.mahdi.yumnote.ui.login.clicks.LoginHelper;
 public class LoginActivity extends AppCompatActivity {
 
 
-    LoginViewmodel loginViewmodel;
+    private SharedPrefer sharedPrefer;
+    private LoginViewmodel loginViewmodel;
     private ActivityLoginBinding binding;
 
 
@@ -34,7 +37,16 @@ public class LoginActivity extends AppCompatActivity {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         loginViewmodel = new ViewModelProvider(this).get(LoginViewmodel.class);
+        sharedPrefer = new SharedPrefer(this);
 //--------------------------------------------------------------------------------------------
+
+
+        if (sharedPrefer.isUserLogin())
+        {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
 
 
@@ -49,12 +61,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void ClickLogin(View view) {
                 String[] arr = loginViewmodel.getValue();
-                new LoginRx().Submit(arr[0], arr[1]);
+                new LoginRx().Submit(view.getContext(),arr[0], arr[1]);
             }
         });
 
 
     }
+
+
+
 
 
 
