@@ -31,7 +31,7 @@ public class ProfileServer {
 
     @SerializedName("PhoneResponse")
     @Expose
-    private int PhoneResponse;
+    private String PhoneResponse;
 
 
 //--------------------------------------------------------------------------
@@ -46,7 +46,7 @@ public class ProfileServer {
     private String pass;
 
 
-    public ProfileServer(int idResponse, String userResponse, String passwordResponse, String emailResponse, int phoneResponse, String user, String pass) {
+    public ProfileServer(int idResponse, String userResponse, String passwordResponse, String emailResponse, String phoneResponse, String user, String pass) {
         IdResponse = idResponse;
         UserResponse = userResponse;
         PasswordResponse = passwordResponse;
@@ -88,11 +88,11 @@ public class ProfileServer {
         EmailResponse = emailResponse;
     }
 
-    public int getPhoneResponse() {
+    public String getPhoneResponse() {
         return PhoneResponse;
     }
 
-    public void setPhoneResponse(int phoneResponse) {
+    public void setPhoneResponse(String phoneResponse) {
         PhoneResponse = phoneResponse;
     }
 

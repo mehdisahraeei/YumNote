@@ -270,7 +270,7 @@
             android:fontFamily="monospace"
             android:textColor="@color/black"
             android:textDirection="firstStrongLtr"
-            android:textSize="@dimen/_9font_mdp"
+            android:textSize="@dimen/_11font_mdp"
             app:layout_constraintBottom_toBottomOf="@+id/br3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.54"
