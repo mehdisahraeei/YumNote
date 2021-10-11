@@ -2,8 +2,10 @@ package com.mahdi.yumnote.networking.retrofit;
 
 
 import com.mahdi.yumnote.model.retrofit.LoginServer;
+import com.mahdi.yumnote.model.retrofit.ProfileImageServer;
 import com.mahdi.yumnote.model.retrofit.ProfileServer;
 import com.mahdi.yumnote.model.retrofit.SignupServer;
+import com.mahdi.yumnote.model.retrofit.photoServer;
 import io.reactivex.rxjava3.core.Observable;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -28,6 +30,17 @@ public interface ApiServices {
     @FormUrlEncoded
     @POST("profile_upload.php")
     Observable<ProfileServer> ProfileUpload(@Field("userProfile") String user, @Field("passProfile") String password);
+
+
+    @FormUrlEncoded
+    @POST("ProfileImage.php")
+    Observable<ProfileImageServer> ProfileUpload(@Field("urlImageP") String url, @Field("imageImageP") String image , @Field("userImageP") String user, @Field("passImageP") String password);
+
+
+    @FormUrlEncoded
+    @POST("getProfilephoto.php")
+    Observable<photoServer> Get_Image(@Field("userimg") String user, @Field("passimg") String password);
+
 
 
 

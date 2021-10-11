@@ -5,6 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
+    <data>
+        <variable
+            name="ProfileClickHelper"
+            type="com.mahdi.yumnote.ui.main.fragments.clicks.profile.ProfileHelper" />
+    </data>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/bdpm"
             android:layout_width="@dimen/_75mdp"
             android:layout_height="@dimen/_40mdp"
             android:layout_marginTop="@dimen/_142mdp"
@@ -42,7 +47,7 @@
             android:layout_height="@dimen/_40mdp"
             android:layout_marginTop="@dimen/_100mdp"
             android:src="@drawable/default_profile"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintBottom_toBottomOf="@+id/bdpm"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +59,7 @@
             android:layout_height="32dp"
             android:layout_marginTop="@dimen/_175mdp"
             android:src="@drawable/lbl6"
+            android:onClick="@{(v) -> ProfileClickHelper.ClickProfileImage(v)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -164,7 +170,6 @@
             app:layout_constraintTop_toTopOf="@+id/br3" />
 
 
-
         <ImageView
             android:id="@+id/arrow4"
             android:layout_width="@dimen/_18mdp"
@@ -189,7 +194,6 @@
             app:layout_constraintTop_toTopOf="@+id/br1" />
 
 
-
         <ImageView
             android:id="@+id/icon2"
             android:layout_width="@dimen/_23mdp"
@@ -212,7 +216,6 @@
             app:layout_constraintHorizontal_bias="0.22"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/br3" />
-
 
 
         <ImageView
@@ -293,9 +296,6 @@
             app:layout_constraintHorizontal_bias="0.54"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/br4" />
-
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
