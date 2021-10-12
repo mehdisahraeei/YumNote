@@ -87,9 +87,18 @@ public class ImageUploadRx {
 
                     @Override
                     public void onNext(@NonNull photoServer photoServer) {
-                        Glide.with(view.getContext())
-                                .load("http://10.0.2.2/yumnote/" + photoServer.getImageimg())
-                                .into(profileDisplay);
+
+                        if (photoServer.getImageimg().equals(""))
+                        {
+                            profileDisplay.setImageResource(R.drawable.default_profile);
+                        }
+                        else {
+
+                            Glide.with(view.getContext())
+                                    .load("http://10.0.2.2/yumnote/" + photoServer.getImageimg())
+                                    .into(profileDisplay);
+                        }
+
                     }
 
                     @Override
