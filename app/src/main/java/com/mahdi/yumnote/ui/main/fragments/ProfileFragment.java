@@ -24,8 +24,10 @@ import com.mahdi.yumnote.databinding.FragmentProfileBinding;
 import com.mahdi.yumnote.other.sharedpreferences.SharedPrefer;
 import com.mahdi.yumnote.rx.main.fragments.profile.ImageUploadRx;
 import com.mahdi.yumnote.rx.main.fragments.profile.ShowValueRx;
+import com.mahdi.yumnote.ui.main.fragments.clicks.profile.ProfileClicks;
 import com.mahdi.yumnote.ui.main.fragments.clicks.profile.ProfileHelper;
 import java.io.IOException;
+
 
 
 
@@ -43,6 +45,9 @@ public class ProfileFragment extends Fragment {
     private View view;
 
 
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -52,13 +57,15 @@ public class ProfileFragment extends Fragment {
         view = binding.getRoot();
 
 
-
         preferences = new SharedPrefer(view.getContext());
 
         user = preferences.ValueUser();
         pass = preferences.ValuePass();
 
 //--------------------------------------------------------------------------------------
+
+
+        binding.setProfileClick(new ProfileClicks(user, pass, view.getContext()));
 
 
         binding.setProfileClickHelper(new ProfileHelper() {
@@ -73,9 +80,8 @@ public class ProfileFragment extends Fragment {
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which)
-                    {
-                        new ImageUploadRx().Uploading(bitmap,user,pass);
+                    public void onClick(DialogInterface dialog, int which) {
+                        new ImageUploadRx().Uploading(bitmap, user, pass);
                     }
                 });
 
@@ -85,20 +91,16 @@ public class ProfileFragment extends Fragment {
         });
 
 
-        new ShowValueRx().Showing(view, user, pass);
 
-        new ImageUploadRx().Fetching(view,user,pass);
+
+
+        new ShowValueRx().Showing(view, user, pass);
+        new ImageUploadRx().Fetching(view, user, pass);
 
 
         return view;
 
     }
-
-
-
-
-
-
 
 
     ActivityResultLauncher<Intent> resultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
@@ -122,9 +124,6 @@ public class ProfileFragment extends Fragment {
 
 
 
-
-
-
     @Override
     public void onResume() {
         super.onResume();
@@ -133,8 +132,7 @@ public class ProfileFragment extends Fragment {
             public void run() {
 
 
-
-                new ImageUploadRx().Fetching(view,user,pass);
+                new ImageUploadRx().Fetching(view, user, pass);
 
                 new ShowValueRx().Showing(view, user, pass);
 
@@ -145,11 +143,15 @@ public class ProfileFragment extends Fragment {
 
 
 
+
+
     @Override
     public void onPause() {
         super.onPause();
         handler.removeCallbacks(runnable); //stop handler when activity not visible
     }
+
+
 
 
 }

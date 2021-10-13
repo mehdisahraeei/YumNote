@@ -6,9 +6,16 @@
 
 
     <data>
+
+        <variable
+            name="ProfileClick"
+            type="com.mahdi.yumnote.ui.main.fragments.clicks.profile.ProfileClicks" />
+
+
         <variable
             name="ProfileClickHelper"
             type="com.mahdi.yumnote.ui.main.fragments.clicks.profile.ProfileHelper" />
+
     </data>
 
 
@@ -94,6 +101,7 @@
             android:layout_width="@dimen/_190mdp"
             android:layout_height="@dimen/_32mdp"
             android:background="@drawable/lbl5"
+            android:onClick="@{() -> ProfileClick.ClickUser()}"
             app:layout_constraintBottom_toTopOf="@+id/br2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -105,6 +113,7 @@
             android:layout_width="@dimen/_190mdp"
             android:layout_height="@dimen/_32mdp"
             android:background="@drawable/lbl5"
+            android:onClick="@{() -> ProfileClick.ClickPass()}"
             app:layout_constraintBottom_toTopOf="@+id/br3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -116,6 +125,7 @@
             android:layout_width="@dimen/_190mdp"
             android:layout_height="@dimen/_32mdp"
             android:background="@drawable/lbl5"
+            android:onClick="@{() -> ProfileClick.ClickEmail()}"
             app:layout_constraintBottom_toBottomOf="@+id/profilebd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -127,6 +137,7 @@
             android:layout_width="@dimen/_190mdp"
             android:layout_height="@dimen/_32mdp"
             android:background="@drawable/lbl5"
+            android:onClick="@{() -> ProfileClick.ClickPhone()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
