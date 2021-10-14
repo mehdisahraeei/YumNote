@@ -61,7 +61,6 @@ public class ProfileFragment extends Fragment {
 
         user = preferences.ValueUser();
         pass = preferences.ValuePass();
-
 //--------------------------------------------------------------------------------------
 
 
@@ -99,8 +98,9 @@ public class ProfileFragment extends Fragment {
 
 
         return view;
-
     }
+
+
 
 
     ActivityResultLauncher<Intent> resultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
@@ -124,6 +124,7 @@ public class ProfileFragment extends Fragment {
 
 
 
+
     @Override
     public void onResume() {
         super.onResume();
@@ -133,7 +134,6 @@ public class ProfileFragment extends Fragment {
 
 
                 new ImageUploadRx().Fetching(view, user, pass);
-
                 new ShowValueRx().Showing(view, user, pass);
 
                 handler.postDelayed(runnable, apiDelayed);
@@ -150,7 +150,6 @@ public class ProfileFragment extends Fragment {
         super.onPause();
         handler.removeCallbacks(runnable); //stop handler when activity not visible
     }
-
 
 
 

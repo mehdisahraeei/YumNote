@@ -19,7 +19,7 @@
 
 
 			$qry="INSERT INTO tableData(username,email,password,phone,url)
-	                       	      VALUES ('$user','$email','$password',0,'null')";
+	                       	      VALUES ('$user','$email','$password',0,'')";
 
 			$res=mysqli_query($conn,$qry);
 			

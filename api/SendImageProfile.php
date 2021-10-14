@@ -6,8 +6,8 @@
 
 
 
-$id_Res = 0;
-$imageRes = "";
+$id_imgp = 0;
+$image_imgp = "";
 
 $Res = array();
 

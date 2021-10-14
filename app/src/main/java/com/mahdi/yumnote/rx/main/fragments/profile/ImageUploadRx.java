@@ -39,7 +39,7 @@ public class ImageUploadRx {
         String _image = Base64.encodeToString(outputStream.toByteArray(), Base64.DEFAULT);
 
         ApiServices apiServices = RetrofitClient.getApiServices();
-        Observable<ProfileImageServer> upload = apiServices.ProfileUpload(_name, _image, user, pass);
+        Observable<ProfileImageServer> upload = apiServices.SendImageProfile(_name, _image, user, pass);
         upload.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<ProfileImageServer>() {
@@ -76,7 +76,7 @@ public class ImageUploadRx {
 
 
         ApiServices apiServices = RetrofitClient.getApiServices();
-        Observable<photoServer> observable = apiServices.Get_Image(user, pass);
+        Observable<photoServer> observable = apiServices.ReceivedProfilephoto(user, pass);
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<photoServer>() {

@@ -3,19 +3,20 @@ package com.mahdi.yumnote.model.retrofit;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+
 public class SignupServer {
 
 
 
-    @SerializedName("user")
+    @SerializedName("userSignUp")
     @Expose
     private String user;
 
-    @SerializedName("email")
+    @SerializedName("emailSignUp")
     @Expose
     private String email;
 
-    @SerializedName("pass")
+    @SerializedName("passSignUp")
     @Expose
     private String password;
 
