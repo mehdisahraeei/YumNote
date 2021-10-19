@@ -1,12 +1,12 @@
-package com.mahdi.yumnote.networking.retrofit;
+package com.mahdi.yumnote.networking.retrofit.api;
 
 
-import com.mahdi.yumnote.model.retrofit.LoginServer;
-import com.mahdi.yumnote.model.retrofit.PhoneServer;
-import com.mahdi.yumnote.model.retrofit.ProfileImageServer;
-import com.mahdi.yumnote.model.retrofit.ProfileServer;
-import com.mahdi.yumnote.model.retrofit.SignupServer;
-import com.mahdi.yumnote.model.retrofit.photoServer;
+import com.mahdi.yumnote.model.retrofit.api1.LoginServer;
+import com.mahdi.yumnote.model.retrofit.api1.PhoneServer;
+import com.mahdi.yumnote.model.retrofit.api1.ProfileImageServer;
+import com.mahdi.yumnote.model.retrofit.api1.ProfileServer;
+import com.mahdi.yumnote.model.retrofit.api1.SignupServer;
+import com.mahdi.yumnote.model.retrofit.api1.photoServer;
 import io.reactivex.rxjava3.core.Observable;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -15,7 +15,7 @@ import retrofit2.http.POST;
 
 
 
-public interface ApiServices {
+public interface ApiServices1 {
 
 
     //about sign up

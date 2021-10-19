@@ -1,4 +1,4 @@
-package com.mahdi.yumnote.model.retrofit;
+package com.mahdi.yumnote.model.retrofit.api1;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

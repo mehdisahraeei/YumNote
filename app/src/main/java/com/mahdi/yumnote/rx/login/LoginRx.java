@@ -5,9 +5,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import com.mahdi.yumnote.model.retrofit.LoginServer;
-import com.mahdi.yumnote.networking.retrofit.ApiServices;
-import com.mahdi.yumnote.networking.retrofit.RetrofitClient;
+import com.mahdi.yumnote.model.retrofit.api1.LoginServer;
+import com.mahdi.yumnote.networking.retrofit.api.ApiServices1;
+import com.mahdi.yumnote.networking.retrofit.client.RetrofitClient;
 import com.mahdi.yumnote.other.sharedpreferences.SharedPrefer;
 import com.mahdi.yumnote.ui.main.activity.MainActivity;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
@@ -33,7 +33,7 @@ public class LoginRx {
     public void Submit(Context context, String user, String pass) {
 
 
-        ApiServices apiServices = RetrofitClient.getApiServices();
+        ApiServices1 apiServices = RetrofitClient.getApiServices();
 
         observable = apiServices.LoginDoing(user, pass);
         observable.subscribeOn(Schedulers.io())

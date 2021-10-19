@@ -5,9 +5,9 @@ package com.mahdi.yumnote.rx.main.fragments.profile;
 import android.view.View;
 import android.widget.TextView;
 import com.mahdi.yumnote.R;
-import com.mahdi.yumnote.model.retrofit.ProfileServer;
-import com.mahdi.yumnote.networking.retrofit.ApiServices;
-import com.mahdi.yumnote.networking.retrofit.RetrofitClient;
+import com.mahdi.yumnote.model.retrofit.api1.ProfileServer;
+import com.mahdi.yumnote.networking.retrofit.api.ApiServices1;
+import com.mahdi.yumnote.networking.retrofit.client.RetrofitClient;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Observable;
@@ -38,7 +38,7 @@ public class ShowValueRx {
 //----------------------------------------------------------
 
 
-        ApiServices apiServices = RetrofitClient.getApiServices();
+        ApiServices1 apiServices = RetrofitClient.getApiServices();
 
         Observable<ProfileServer> observable = apiServices.ProfileUpload(user, pass);
         observable.subscribeOn(Schedulers.io())

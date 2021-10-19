@@ -1,41 +1,32 @@
-package com.mahdi.yumnote.model.retrofit;
+package com.mahdi.yumnote.model.retrofit.api1;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
-public class LoginServer {
+public class SignupServer {
 
-    @SerializedName("isSuccess")
-    @Expose
-    private int isSuccess;
 
-    @SerializedName("userLogin")
+
+    @SerializedName("userSignUp")
     @Expose
     private String user;
 
-    @SerializedName("passLogin")
+    @SerializedName("emailSignUp")
+    @Expose
+    private String email;
+
+    @SerializedName("passSignUp")
     @Expose
     private String password;
 
 
-
-
-    public LoginServer(int isSuccess, String user, String password) {
-        this.isSuccess = isSuccess;
+    public SignupServer(String user, String email, String password) {
         this.user = user;
+        this.email = email;
         this.password = password;
     }
 
-
-
-    public int getIsSuccess() {
-        return isSuccess;
-    }
-
-    public void setIsSuccess(int isSuccess) {
-        this.isSuccess = isSuccess;
-    }
 
     public String getUser() {
         return user;
@@ -43,6 +34,14 @@ public class LoginServer {
 
     public void setUser(String user) {
         this.user = user;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {

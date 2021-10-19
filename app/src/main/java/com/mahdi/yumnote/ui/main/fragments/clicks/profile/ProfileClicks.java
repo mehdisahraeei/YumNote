@@ -7,10 +7,10 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
-import com.mahdi.yumnote.model.retrofit.PhoneServer;
-import com.mahdi.yumnote.model.retrofit.ProfileServer;
-import com.mahdi.yumnote.networking.retrofit.ApiServices;
-import com.mahdi.yumnote.networking.retrofit.RetrofitClient;
+import com.mahdi.yumnote.model.retrofit.api1.PhoneServer;
+import com.mahdi.yumnote.model.retrofit.api1.ProfileServer;
+import com.mahdi.yumnote.networking.retrofit.api.ApiServices1;
+import com.mahdi.yumnote.networking.retrofit.client.RetrofitClient;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Observable;
@@ -36,7 +36,7 @@ public class ProfileClicks {
 
     public void ClickUser() {
 
-        ApiServices apiServices = RetrofitClient.getApiServices();
+        ApiServices1 apiServices = RetrofitClient.getApiServices();
 
         Observable<ProfileServer> observable = apiServices.ProfileUpload(user, pass);
         observable.subscribeOn(Schedulers.io())
@@ -111,7 +111,7 @@ public class ProfileClicks {
     public void ClickEmail() {
 
 
-        ApiServices apiServices = RetrofitClient.getApiServices();
+        ApiServices1 apiServices = RetrofitClient.getApiServices();
 
         Observable<ProfileServer> observable = apiServices.ProfileUpload(user, pass);
         observable.subscribeOn(Schedulers.io())
@@ -150,7 +150,7 @@ public class ProfileClicks {
 
     public void ClickPhone() {
 
-        ApiServices apiServices = RetrofitClient.getApiServices();
+        ApiServices1 apiServices = RetrofitClient.getApiServices();
         Observable<PhoneServer> observable = apiServices.SendPhoneProfile("*******", user, pass);
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

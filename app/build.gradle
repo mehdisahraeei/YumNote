@@ -40,14 +40,6 @@ android {
 
 dependencies {
 
-    //Bottom Navygation
-    implementation 'com.github.felixsoares:BottomNavygation:1.8.6'
-
-
-    //designing responsive
-    implementation 'com.github.MrNouri:DynamicSizes:1.0'
-
-
     //default
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
@@ -80,6 +72,16 @@ dependencies {
     implementation 'com.google.ar:core:1.23.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.33'
+
+
+
+
+    //Bottom Navygation
+    implementation 'com.github.felixsoares:BottomNavygation:1.8.6'
+
+
+    //designing responsive
+    implementation 'com.github.MrNouri:DynamicSizes:1.0'
 
 
 

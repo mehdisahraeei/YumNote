@@ -1,6 +1,7 @@
-package com.mahdi.yumnote.networking.retrofit;
+package com.mahdi.yumnote.networking.retrofit.client;
 
 
+import com.mahdi.yumnote.networking.retrofit.api.ApiServices1;
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -26,9 +27,9 @@ public class RetrofitClient {
 
 
 
-    public static ApiServices getApiServices()
+    public static ApiServices1 getApiServices()
     {
-        return getInstance().create(ApiServices.class);
+        return getInstance().create(ApiServices1.class);
     }
 
 

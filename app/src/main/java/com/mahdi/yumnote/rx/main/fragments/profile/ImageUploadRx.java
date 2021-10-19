@@ -8,10 +8,10 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import com.bumptech.glide.Glide;
 import com.mahdi.yumnote.R;
-import com.mahdi.yumnote.model.retrofit.ProfileImageServer;
-import com.mahdi.yumnote.model.retrofit.photoServer;
-import com.mahdi.yumnote.networking.retrofit.ApiServices;
-import com.mahdi.yumnote.networking.retrofit.RetrofitClient;
+import com.mahdi.yumnote.model.retrofit.api1.ProfileImageServer;
+import com.mahdi.yumnote.model.retrofit.api1.photoServer;
+import com.mahdi.yumnote.networking.retrofit.api.ApiServices1;
+import com.mahdi.yumnote.networking.retrofit.client.RetrofitClient;
 import java.io.ByteArrayOutputStream;
 import java.util.Calendar;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
@@ -38,7 +38,7 @@ public class ImageUploadRx {
         String _name = String.valueOf(Calendar.getInstance().getTimeInMillis());
         String _image = Base64.encodeToString(outputStream.toByteArray(), Base64.DEFAULT);
 
-        ApiServices apiServices = RetrofitClient.getApiServices();
+        ApiServices1 apiServices = RetrofitClient.getApiServices();
         Observable<ProfileImageServer> upload = apiServices.SendImageProfile(_name, _image, user, pass);
         upload.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -75,7 +75,7 @@ public class ImageUploadRx {
         profileDisplay = view.findViewById(R.id.default_profile);
 
 
-        ApiServices apiServices = RetrofitClient.getApiServices();
+        ApiServices1 apiServices = RetrofitClient.getApiServices();
         Observable<photoServer> observable = apiServices.ReceivedProfilephoto(user, pass);
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
