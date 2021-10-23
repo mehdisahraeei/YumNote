@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
@@ -19,6 +18,8 @@ import java.util.List;
 
 public class CustomAdabter extends RecyclerView.Adapter<CustomAdabter.customView> {
 
+
+    private static ClickListener clickListener;
     private Context context;
     private List<PosterModel> list;
 
@@ -36,7 +37,7 @@ public class CustomAdabter extends RecyclerView.Adapter<CustomAdabter.customView
     @NonNull
     @Override
     public customView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.body_recyclerview, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.body_recycler, parent, false);
         return new customView(view);
     }
 
@@ -61,18 +62,45 @@ public class CustomAdabter extends RecyclerView.Adapter<CustomAdabter.customView
 
 
 
+    public class customView extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
 
-    public class customView extends RecyclerView.ViewHolder {
+        
+        ImageView PhotoMain,layout;
 
-        RelativeLayout layout;
-        ImageView PhotoMain;
 
         public customView(@NonNull View itemView) {
             super(itemView);
 
+            itemView.setOnClickListener(this);
+            itemView.setOnLongClickListener(this);
             PhotoMain = itemView.findViewById(R.id.image_recycler);
-            layout = itemView.findViewById(R.id.layout_recycler);
+            layout = itemView.findViewById(R.id.transpar1);
+
         }
+
+        @Override
+        public void onClick(View v) {
+            clickListener.onItemClick(getAdapterPosition(), v);
+        }
+
+        @Override
+        public boolean onLongClick(View v) {
+            clickListener.onItemLongClick(getAdapterPosition(), v);
+            return false;
+        }
+
+    }
+
+
+    public void setOnItemClickListener(ClickListener clickListener) {
+        CustomAdabter.clickListener = clickListener;
+    }
+
+
+
+    public interface ClickListener {
+        void onItemClick(int position, View v);
+        void onItemLongClick(int position, View v);
     }
 
 

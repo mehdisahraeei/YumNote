@@ -1,14 +1,20 @@
 package com.mahdi.yumnote.model.recyclerview;
 
+
+
 public class PosterModel {
+
 
     private String id;
     public String photojson;
+
+
 
     public PosterModel(String id, String photojson) {
         this.id = id;
         this.photojson = photojson;
     }
+
 
 
     public String getId() {
@@ -19,6 +25,7 @@ public class PosterModel {
         this.id = id;
     }
 
+
     public String getPhotojson() {
         return photojson;
     }
@@ -27,6 +34,7 @@ public class PosterModel {
         this.photojson = photojson;
     }
 
+
     @Override
     public String toString() {
         return "PosterModel{" +
@@ -34,6 +42,7 @@ public class PosterModel {
                 ", photojson='" + photojson + '\'' +
                 '}';
     }
+
 
 
 }

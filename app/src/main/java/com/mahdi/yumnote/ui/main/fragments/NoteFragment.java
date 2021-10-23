@@ -11,7 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.mahdi.yumnote.R;
 import com.mahdi.yumnote.databinding.FragmentNoteBinding;
+import com.mahdi.yumnote.other.SliderView.Slider;
 import com.mahdi.yumnote.rx.main.fragments.note.JsonDisplayRx;
+
+
 
 
 public class NoteFragment extends Fragment {
@@ -20,6 +23,8 @@ public class NoteFragment extends Fragment {
     private View view;
     private FragmentNoteBinding binding;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -27,7 +32,9 @@ public class NoteFragment extends Fragment {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_note,null,false);
         view = binding.getRoot();
 
-        new JsonDisplayRx().jsoning(view);
+        new Slider().Run(view);
+
+        new JsonDisplayRx(view).jsoning();
 
         return view;
     }

@@ -3,37 +3,37 @@
 
   {
     "id": "1",
-    "photojson": "http://10.0.2.2/yumnote/photos/wordpress.png"
+    "photojson": "http://10.0.2.2/yumnote/photos/_wordpress.png"
 
   },
   
   
   {
     "id": "2",
-    "photojson": "http://10.0.2.2/yumnote/photos/stackoverflow.png"
+    "photojson": "http://10.0.2.2/yumnote/photos/_stackoverflow.png"
   },
   
   
   {
     "id": "3",
-    "photojson": "http://10.0.2.2/yumnote/photos/github.png"
+    "photojson": "http://10.0.2.2/yumnote/photos/_github.png"
   },
 
   {
     "id": "4",
-    "photojson": "http://10.0.2.2/yumnote/photos/gitlab.png"
+    "photojson": "http://10.0.2.2/yumnote/photos/_gitlab.png"
   },
   
   
   { 
     "id": "5",
-    "photojson": "http://10.0.2.2/yumnote/photos/base64.png"
+    "photojson": "http://10.0.2.2/yumnote/photos/_base64.png"
   },
   
   
   {
     "id": "6",
-    "photojson": "http://10.0.2.2/yumnote/photos/compiler.png"
+    "photojson": "http://10.0.2.2/yumnote/photos/_compiler.png"
   }
   
   
