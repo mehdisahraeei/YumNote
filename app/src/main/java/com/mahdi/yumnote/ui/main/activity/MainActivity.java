@@ -1,6 +1,7 @@
 package com.mahdi.yumnote.ui.main.activity;
 
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentManager;

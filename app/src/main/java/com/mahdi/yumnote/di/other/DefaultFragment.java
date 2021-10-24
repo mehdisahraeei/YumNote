@@ -1,10 +1,11 @@
 package com.mahdi.yumnote.di.other;
 
 
+
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.mahdi.yumnote.R;
-import com.mahdi.yumnote.ui.main.fragments.ImageFragment;
+import com.mahdi.yumnote.ui.main.fragments.NoteFragment;
 import javax.inject.Inject;
 
 
@@ -20,7 +21,7 @@ public class DefaultFragment {
     public void RunFragmnt(FragmentManager fragmentManager) {
         //default
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.replace(R.id.frame1, new ImageFragment());
+        ft.replace(R.id.frame1, new NoteFragment());
         ft.commit();
     }
 

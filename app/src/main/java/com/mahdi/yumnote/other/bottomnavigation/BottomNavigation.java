@@ -8,7 +8,6 @@ import androidx.fragment.app.FragmentTransaction;
 import com.felix.bottomnavygation.BottomNav;
 import com.felix.bottomnavygation.ItemNav;
 import com.mahdi.yumnote.R;
-import com.mahdi.yumnote.ui.main.fragments.ImageFragment;
 import com.mahdi.yumnote.ui.main.fragments.NoteFragment;
 import com.mahdi.yumnote.ui.main.fragments.ProfileFragment;
 
@@ -45,7 +44,6 @@ public class BottomNavigation {
 
         bottomNav = view.findViewById(R.id.bottomNav);
 
-        bottomNav.addItemNav(new ItemNav(context, R.drawable.image).addColorAtive(R.color.blue));
         bottomNav.addItemNav(new ItemNav(context, R.drawable.note).addColorAtive(R.color.blue));
         bottomNav.addItemNav(new ItemNav(context, R.drawable.setting).addColorAtive(R.color.blue));
         bottomNav.build();
@@ -56,13 +54,9 @@ public class BottomNavigation {
             public void onTabSelected(int i) {
                 if (i == 0) {
                     FragmentTransaction ft = fragmentManager.beginTransaction();
-                    ft.replace(R.id.frame1, new ImageFragment());
-                    ft.commit();
-                } else if (i == 1) {
-                    FragmentTransaction ft = fragmentManager.beginTransaction();
                     ft.replace(R.id.frame1, new NoteFragment());
                     ft.commit();
-                } else if (i == 2) {
+                } else if (i == 1) {
                     FragmentTransaction ft = fragmentManager.beginTransaction();
                     ft.replace(R.id.frame1, new ProfileFragment());
                     ft.commit();
