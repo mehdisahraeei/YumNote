@@ -3,30 +3,112 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/body">
 
 
+
         <com.daimajia.slider.library.SliderLayout
             android:id="@+id/slider"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/_137mdp"
             custom:auto_cycle="true"
-            custom:indicator_visibility="visible" />
+            custom:indicator_visibility="visible"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/git_tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Git Tools"
+            android:textSize="@dimen/_15font_mdp"
+            custom:layout_constraintBottom_toTopOf="@+id/icon_github"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintHorizontal_bias="0.091"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toBottomOf="@+id/slider"
+            custom:layout_constraintVertical_bias="0.833" />
+
+        <ImageView
+            android:id="@+id/icon_more"
+            android:layout_width="@dimen/_82mdp"
+            android:layout_height="@dimen/_44mdp"
+            android:layout_marginTop="104dp"
+            android:layout_marginBottom="124dp"
+            android:background="@drawable/lbl11"
+            custom:layout_constraintBottom_toTopOf="@+id/recyclerview1"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintHorizontal_bias="0.506"
+            custom:layout_constraintStart_toEndOf="@+id/icon_bitbucket"
+            custom:layout_constraintTop_toBottomOf="@+id/slider" />
+
+        <ImageView
+            android:id="@+id/icon_github"
+            android:layout_width="@dimen/_45mdp"
+            android:layout_height="@dimen/_45mdp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="104dp"
+            android:layout_marginBottom="122dp"
+            android:src="@drawable/lbl8"
+            custom:layout_constraintBottom_toTopOf="@+id/recyclerview1"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toBottomOf="@+id/slider" />
+
+        <ImageView
+            android:id="@+id/icon_gitlab"
+            android:layout_width="@dimen/_45mdp"
+            android:layout_height="@dimen/_45mdp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="104dp"
+            android:layout_marginBottom="96dp"
+            android:src="@drawable/lbl9"
+            custom:layout_constraintBottom_toTopOf="@+id/othertools"
+            custom:layout_constraintStart_toEndOf="@+id/icon_github"
+            custom:layout_constraintTop_toBottomOf="@+id/slider" />
+
+        <ImageView
+            android:id="@+id/icon_bitbucket"
+            android:layout_width="@dimen/_45mdp"
+            android:layout_height="@dimen/_45mdp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="104dp"
+            android:layout_marginBottom="96dp"
+            android:src="@drawable/lbl10"
+            custom:layout_constraintBottom_toTopOf="@+id/othertools"
+            custom:layout_constraintStart_toEndOf="@+id/icon_gitlab"
+            custom:layout_constraintTop_toBottomOf="@+id/slider" />
+
+        <TextView
+            android:id="@+id/othertools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Other Tools"
+            android:textSize="@dimen/_15font_mdp"
+            custom:layout_constraintBottom_toTopOf="@+id/recyclerview1"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent"
+            custom:layout_constraintTop_toBottomOf="@+id/icon_github"
+            custom:layout_constraintVertical_bias="1.0" />
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/slider"
-            android:layout_centerInParent="true" />
+            android:layout_height="@dimen/_190mdp"
+            android:layout_centerInParent="true"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintStart_toStartOf="parent" />
 
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </layout>

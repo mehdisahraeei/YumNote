@@ -27,11 +27,11 @@ public class Slider implements ViewPagerEx.OnPageChangeListener, BaseSliderView.
 
         HashMap<String, String> file_maps = new HashMap<>();
 
-        file_maps.put("1", "http://10.0.2.2/yumnote/photos/dev1.jpg");
-        file_maps.put("2", "http://10.0.2.2/yumnote/photos/dev2.jpg");
-        file_maps.put("3", "http://10.0.2.2/yumnote/photos/dev3.jpg");
-        file_maps.put("4", "http://10.0.2.2/yumnote/photos/dev4.jpg");
-        file_maps.put("5", "http://10.0.2.2/yumnote/photos/dev5.jpg");
+        file_maps.put("1", "http://10.0.2.2/yumnote/photos/slide1.png");
+        file_maps.put("2", "http://10.0.2.2/yumnote/photos/slide2.png");
+        file_maps.put("3", "http://10.0.2.2/yumnote/photos/slide3.png");
+        file_maps.put("4", "http://10.0.2.2/yumnote/photos/slide4.png");
+        file_maps.put("5", "http://10.0.2.2/yumnote/photos/slide5.png");
 
 
 
