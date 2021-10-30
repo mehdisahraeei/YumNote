@@ -3,11 +3,19 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="NoteClick"
+            type="com.mahdi.yumnote.ui.main.fragments.clicks.note.NoteClicks" />
+
+    </data>
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/body">
-
 
 
         <com.daimajia.slider.library.SliderLayout
@@ -35,18 +43,7 @@
             custom:layout_constraintTop_toBottomOf="@+id/slider"
             custom:layout_constraintVertical_bias="0.833" />
 
-        <ImageView
-            android:id="@+id/icon_more"
-            android:layout_width="@dimen/_82mdp"
-            android:layout_height="@dimen/_44mdp"
-            android:layout_marginTop="104dp"
-            android:layout_marginBottom="124dp"
-            android:background="@drawable/lbl11"
-            custom:layout_constraintBottom_toTopOf="@+id/recyclerview1"
-            custom:layout_constraintEnd_toEndOf="parent"
-            custom:layout_constraintHorizontal_bias="0.506"
-            custom:layout_constraintStart_toEndOf="@+id/icon_bitbucket"
-            custom:layout_constraintTop_toBottomOf="@+id/slider" />
+
 
         <ImageView
             android:id="@+id/icon_github"
@@ -55,10 +52,12 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="104dp"
             android:layout_marginBottom="122dp"
+            android:onClick="@{() -> NoteClick.GithubClick()}"
             android:src="@drawable/lbl8"
             custom:layout_constraintBottom_toTopOf="@+id/recyclerview1"
             custom:layout_constraintStart_toStartOf="parent"
             custom:layout_constraintTop_toBottomOf="@+id/slider" />
+
 
         <ImageView
             android:id="@+id/icon_gitlab"
@@ -67,6 +66,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="104dp"
             android:layout_marginBottom="96dp"
+            android:onClick="@{() -> NoteClick.GitlabClick()}"
             android:src="@drawable/lbl9"
             custom:layout_constraintBottom_toTopOf="@+id/othertools"
             custom:layout_constraintStart_toEndOf="@+id/icon_github"
@@ -79,10 +79,27 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="104dp"
             android:layout_marginBottom="96dp"
+            android:onClick="@{() -> NoteClick.BitbucketClick()}"
             android:src="@drawable/lbl10"
             custom:layout_constraintBottom_toTopOf="@+id/othertools"
             custom:layout_constraintStart_toEndOf="@+id/icon_gitlab"
             custom:layout_constraintTop_toBottomOf="@+id/slider" />
+
+
+        <ImageView
+            android:id="@+id/icon_more"
+            android:layout_width="@dimen/_82mdp"
+            android:layout_height="@dimen/_44mdp"
+            android:layout_marginTop="104dp"
+            android:layout_marginBottom="124dp"
+            android:background="@drawable/lbl11"
+            android:onClick="@{() -> NoteClick.MoreItemClick()}"
+            custom:layout_constraintBottom_toTopOf="@+id/recyclerview1"
+            custom:layout_constraintEnd_toEndOf="parent"
+            custom:layout_constraintHorizontal_bias="0.506"
+            custom:layout_constraintStart_toEndOf="@+id/icon_bitbucket"
+            custom:layout_constraintTop_toBottomOf="@+id/slider" />
+
 
         <TextView
             android:id="@+id/othertools"

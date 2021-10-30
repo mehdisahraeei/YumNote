@@ -19,6 +19,7 @@
         <entry key="app/src/main/res/drawable/lbl9.xml" value="0.184375" />
         <entry key="app/src/main/res/drawable/note.xml" value="0.1046875" />
         <entry key="app/src/main/res/drawable/setting.xml" value="0.1046875" />
+        <entry key="app/src/main/res/drawable/transparent_round_bg.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_logup.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -30,6 +31,7 @@
         <entry key="app/src/main/res/layout/fragment_note.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_setting.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/layout_bottom_sheet.xml" value="0.22" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.15462962962962962" />
       </map>
     </option>
