@@ -3,7 +3,7 @@ package com.mahdi.yumnote.ui.main.fragments.clicks.note;
 
 
 import android.content.Context;
-import com.mahdi.yumnote.other.bottomsheet.etc.MoreShow;
+import com.mahdi.yumnote.other.bottomsheet.etc.sheetShow;
 
 
 
@@ -21,19 +21,22 @@ public class NoteClicks {
 
 
     public void GithubClick()
-    { }
+    {
+        new sheetShow(context).GithubShow();
+    }
+
 
 
     public void GitlabClick()
     {
-
+        new sheetShow(context).GitLabShow();
     }
 
 
 
     public void BitbucketClick()
     {
-
+        new sheetShow(context).BitbucketShow();
     }
 
 
@@ -41,7 +44,7 @@ public class NoteClicks {
 
     public void MoreItemClick()
     {
-        new MoreShow().show(context);
+        new sheetShow(context).MoreShow();
     }
 
 
