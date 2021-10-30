@@ -90,25 +90,19 @@ public class JsonDisplayRx {
                     case 0:
                         view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://login.wordpress.org")));
                         break;
-
                     case 1:
-                        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://stackoverflow.com")));
+                        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.codechef.com")));
                         break;
-
                     case 2:
-                        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com")));
-                        break;
-
-                    case 3:
-                        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://gitlab.com")));
-                        break;
-
-                    case 4:
                         view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.base64encode.org")));
                         break;
 
-                    case 5:
-                        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.codechef.com")));
+                    case 3:
+                        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://developer.android.com")));
+                        break;
+
+                    case 4:
+                        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://stackoverflow.com")));
                         break;
 
                 }
