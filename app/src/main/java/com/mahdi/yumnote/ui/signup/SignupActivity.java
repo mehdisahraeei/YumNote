@@ -20,7 +20,7 @@ public class SignupActivity extends AppCompatActivity {
 
     private SignUpViewmodel logupViewmodel;
     private ActivitySignupBinding binding;
-
+    private View view;
 
 
 
@@ -33,8 +33,8 @@ public class SignupActivity extends AppCompatActivity {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_signup);
         logupViewmodel = new ViewModelProvider(this).get(SignUpViewmodel.class);
+        view = binding.getRoot();
 //--------------------------------------------------------------------------------------------
-
 
 
         binding.setSignUp(new SignUpViewmodel(new SignUpModel("username", "email",
@@ -46,7 +46,7 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void ClickSignup(View view) {
                 String[] arr = logupViewmodel.getValue();
-                new SignupRx().Submit(arr[0], arr[1], arr[2], arr[3]);
+                new SignupRx(view).Submit(arr[0], arr[1], arr[2], arr[3]);
             }
         });
 

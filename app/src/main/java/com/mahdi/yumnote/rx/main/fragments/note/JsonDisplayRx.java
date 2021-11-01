@@ -5,6 +5,7 @@ package com.mahdi.yumnote.rx.main.fragments.note;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
+import android.widget.Toast;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mahdi.yumnote.R;
@@ -66,7 +67,7 @@ public class JsonDisplayRx {
 
                     @Override
                     public void onError(@NonNull Throwable e) {
-
+                        Toast.makeText(view.getContext(), "there is not connection. please connect to a network", Toast.LENGTH_LONG).show();
                     }
 
                     @Override
