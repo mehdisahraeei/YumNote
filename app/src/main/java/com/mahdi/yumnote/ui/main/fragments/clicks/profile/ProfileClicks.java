@@ -5,18 +5,22 @@ package com.mahdi.yumnote.ui.main.fragments.clicks.profile;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 import com.mahdi.yumnote.model.retrofit.api1.PhoneServer;
 import com.mahdi.yumnote.model.retrofit.api1.ProfileServer;
 import com.mahdi.yumnote.networking.retrofit.api.ApiServices1;
 import com.mahdi.yumnote.networking.retrofit.client.RetrofitClient;
+import com.mahdi.yumnote.other.sharedpreferences.SharedPrefer;
+import com.mahdi.yumnote.ui.login.LoginActivity;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.Observer;
 import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+
 
 
 public class ProfileClicks {
@@ -179,4 +183,17 @@ public class ProfileClicks {
     }
 
 
+
+    public void ClickLogout()
+    {
+        new SharedPrefer(context).UpdateUser(false);
+        context.startActivity(new Intent(context, LoginActivity.class));
+    }
+
+
+
 }
+
+
+
+

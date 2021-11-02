@@ -5,7 +5,6 @@ package com.mahdi.yumnote.rx.login;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.widget.Toast;
 import com.mahdi.yumnote.model.retrofit.api1.LoginServer;
 import com.mahdi.yumnote.networking.retrofit.api.ApiServices1;
@@ -61,7 +60,7 @@ public class LoginRx {
 
 
                         } else {
-                            Log.i("runyum", "false");
+                            Toast.makeText(context, "entered Values are wrong. try again", Toast.LENGTH_LONG).show();
                         }
                     }
 

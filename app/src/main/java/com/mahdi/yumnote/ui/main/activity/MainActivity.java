@@ -2,10 +2,10 @@ package com.mahdi.yumnote.ui.main.activity;
 
 
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentManager;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import com.mahdi.yumnote.R;
@@ -13,8 +13,7 @@ import com.mahdi.yumnote.databinding.ActivityMainBinding;
 import com.mahdi.yumnote.di.component.AppComponent;
 import com.mahdi.yumnote.di.component.DaggerAppComponent;
 import com.mahdi.yumnote.other.bottomnavigation.BottomNavigation;
-import com.mahdi.yumnote.other.sharedpreferences.SharedPrefer;
-import com.mahdi.yumnote.ui.login.LoginActivity;
+
 
 
 
@@ -52,9 +51,6 @@ public class MainActivity extends AppCompatActivity {
     
     @Override
     public void onBackPressed() {
-        new SharedPrefer(this).UpdateUser(false);
-        startActivity(new Intent(MainActivity.this, LoginActivity.class));
-        finish();
     }
 
 
