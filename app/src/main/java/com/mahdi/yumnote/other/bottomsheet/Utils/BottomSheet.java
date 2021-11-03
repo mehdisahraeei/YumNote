@@ -36,6 +36,7 @@ public class BottomSheet extends Dialog {
 
         this.context = context;
         this.items = items;
+
     }
 
 

@@ -63,7 +63,7 @@ $user_phone = $row['phone'];
 			else{
                       
                       
-                                       $Phone_res = null;
+                                       $Phone_res = "0";
 
                       
 	               }

@@ -6,12 +6,13 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
+import android.graphics.drawable.ColorDrawable;
+import android.view.Window;
 import android.widget.Toast;
-import com.mahdi.yumnote.model.retrofit.api1.PhoneServer;
 import com.mahdi.yumnote.model.retrofit.api1.ProfileServer;
 import com.mahdi.yumnote.networking.retrofit.api.ApiServices1;
 import com.mahdi.yumnote.networking.retrofit.client.RetrofitClient;
+import com.mahdi.yumnote.other.dialog.PhoneCustomDialog;
 import com.mahdi.yumnote.other.sharedpreferences.SharedPrefer;
 import com.mahdi.yumnote.ui.login.LoginActivity;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
@@ -31,11 +32,13 @@ public class ProfileClicks {
 
 
 
+
     public ProfileClicks(String user, String pass, Context context) {
         this.user = user;
         this.pass = pass;
         this.context = context;
     }
+
 
 
     public void ClickUser() {
@@ -77,6 +80,8 @@ public class ProfileClicks {
     }
 
 
+
+
     public void ClickPass() {
 
         Toast.makeText(context, "soon", Toast.LENGTH_SHORT).show();
@@ -110,6 +115,8 @@ public class ProfileClicks {
 
 */
     }
+
+
 
 
     public void ClickEmail() {
@@ -152,35 +159,19 @@ public class ProfileClicks {
     }
 
 
+
+
+
     public void ClickPhone() {
 
-        ApiServices1 apiServices = RetrofitClient.getApiServices();
-        Observable<PhoneServer> observable = apiServices.SendPhoneProfile("*******", user, pass);
-        observable.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<PhoneServer>() {
-                    @Override
-                    public void onSubscribe(@NonNull Disposable d) {
 
-                    }
-
-                    @Override
-                    public void onNext(@NonNull PhoneServer phoneServer) {
-                        Log.i("ok", "ok");
-                    }
-
-                    @Override
-                    public void onError(@NonNull Throwable e) {
-
-                    }
-
-                    @Override
-                    public void onComplete() {
-
-                    }
-                });
+        PhoneCustomDialog dialog = new PhoneCustomDialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        dialog.show();
 
     }
+
 
 
 

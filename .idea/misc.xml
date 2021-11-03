@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/drawable/lbl10.xml" value="0.184375" />
         <entry key="app/src/main/res/drawable/lbl11.xml" value="0.184375" />
         <entry key="app/src/main/res/drawable/lbl12.xml" value="0.14947916666666666" />
+        <entry key="app/src/main/res/drawable/lbl13.xml" value="0.14947916666666666" />
         <entry key="app/src/main/res/drawable/lbl2.xml" value="0.1859375" />
         <entry key="app/src/main/res/drawable/lbl3.xml" value="0.1859375" />
         <entry key="app/src/main/res/drawable/lbl4.xml" value="0.1484375" />
@@ -25,6 +26,7 @@
         <entry key="app/src/main/res/layout/activity_logup.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/body_dialog.xml" value="0.18" />
         <entry key="app/src/main/res/layout/body_profile_recycler.xml" value="0.20304568527918782" />
         <entry key="app/src/main/res/layout/body_recycler.xml" value="0.1703125" />
         <entry key="app/src/main/res/layout/body_recyclerview.xml" value="0.18" />

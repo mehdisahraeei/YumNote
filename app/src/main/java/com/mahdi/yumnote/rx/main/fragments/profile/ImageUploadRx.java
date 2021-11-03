@@ -1,10 +1,12 @@
 package com.mahdi.yumnote.rx.main.fragments.profile;
 
 
+
 import android.graphics.Bitmap;
 import android.util.Base64;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import com.bumptech.glide.Glide;
 import com.mahdi.yumnote.R;
@@ -55,7 +57,6 @@ public class ImageUploadRx {
 
                     @Override
                     public void onError(@NonNull Throwable e) {
-
                     }
 
                     @Override
@@ -103,6 +104,7 @@ public class ImageUploadRx {
 
                     @Override
                     public void onError(@NonNull Throwable e) {
+                        Toast.makeText(view.getContext() , "there is not connection. please connect to a network", Toast.LENGTH_LONG).show();
                     }
 
                     @Override

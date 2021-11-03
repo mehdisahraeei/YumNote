@@ -21,6 +21,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import com.mahdi.yumnote.R;
 import com.mahdi.yumnote.databinding.FragmentProfileBinding;
+import com.mahdi.yumnote.other.dialog.PhoneCustomDialog;
 import com.mahdi.yumnote.other.sharedpreferences.SharedPrefer;
 import com.mahdi.yumnote.rx.main.fragments.profile.ImageUploadRx;
 import com.mahdi.yumnote.rx.main.fragments.profile.ShowValueRx;
@@ -92,10 +93,10 @@ public class ProfileFragment extends Fragment {
 
 
 
-
         new ShowValueRx().Showing(view, user, pass);
         new ImageUploadRx().Fetching(view, user, pass);
 
+        new PhoneCustomDialog(view.getContext(),user,pass);
 
         return view;
     }

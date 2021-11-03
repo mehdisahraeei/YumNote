@@ -21,8 +21,8 @@
         android:id="@+id/transpar1"
         android:layout_width="@dimen/_200mdp"
         android:layout_height="@dimen/_84mdp"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/lbl7" />
 
 
