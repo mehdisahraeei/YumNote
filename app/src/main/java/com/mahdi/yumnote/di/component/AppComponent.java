@@ -14,12 +14,16 @@ import dagger.Component;
 public interface AppComponent {
 
 
+//------------MainActivity---------------
     DefaultFragment getInject();
-
     BottomNavigation getNavigation();
 
-    Slider getSlider();
 
+//------------NoteFragment---------------
+    Slider getSlider();
     JsonDisplayRx getJsonRx();
+
+
+
 
 }

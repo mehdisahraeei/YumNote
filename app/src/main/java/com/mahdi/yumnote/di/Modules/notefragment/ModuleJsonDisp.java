@@ -1,4 +1,4 @@
-package com.mahdi.yumnote.di.Modules;
+package com.mahdi.yumnote.di.Modules.notefragment;
 
 
 import com.mahdi.yumnote.rx.main.fragments.note.JsonDisplayRx;

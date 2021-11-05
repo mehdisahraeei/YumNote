@@ -1,4 +1,4 @@
-package com.mahdi.yumnote.di.Modules;
+package com.mahdi.yumnote.di.Modules.mainactivity;
 
 
 import com.mahdi.yumnote.other.bottomnavigation.BottomNavigation;

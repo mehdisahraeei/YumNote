@@ -26,6 +26,9 @@ public class ShowValueRx {
 
 
 
+    public ShowValueRx() {
+    }
+
 
     public void Showing(View view, String user, String pass) {
 
