@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.mahdi.yumnote.model.retrofit.api1.ProfileServer;
 import com.mahdi.yumnote.networking.retrofit.api.ApiServices1;
 import com.mahdi.yumnote.networking.retrofit.client.RetrofitClient;
+import com.mahdi.yumnote.other.dialog.PassCustomDialog;
 import com.mahdi.yumnote.other.dialog.PhoneCustomDialog;
 import com.mahdi.yumnote.other.sharedpreferences.SharedPrefer;
 import com.mahdi.yumnote.ui.login.LoginActivity;
@@ -85,7 +86,10 @@ public class ProfileClicks {
 
 
     public void ClickPass() {
-        Toast.makeText(context, "soon", Toast.LENGTH_SHORT).show();
+        PassCustomDialog dialog = new PassCustomDialog(context, user, pass);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        dialog.show();
     }
 
 
