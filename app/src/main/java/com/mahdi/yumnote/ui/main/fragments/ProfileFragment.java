@@ -80,6 +80,9 @@ public class ProfileFragment extends Fragment {
 
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                builder.setTitle("are you sure to change it?");
+
+                builder.setNegativeButton("Nope",null);
                 builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
