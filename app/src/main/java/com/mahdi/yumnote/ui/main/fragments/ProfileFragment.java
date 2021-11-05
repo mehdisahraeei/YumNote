@@ -25,11 +25,8 @@ import com.mahdi.yumnote.R;
 import com.mahdi.yumnote.databinding.FragmentProfileBinding;
 import com.mahdi.yumnote.di.component.AppComponent;
 import com.mahdi.yumnote.di.component.DaggerAppComponent;
-import com.mahdi.yumnote.other.dialog.PassCustomDialog;
-import com.mahdi.yumnote.other.dialog.PhoneCustomDialog;
 import com.mahdi.yumnote.other.sharedpreferences.SharedPrefer;
 import com.mahdi.yumnote.rx.main.fragments.profile.ImageUploadRx;
-import com.mahdi.yumnote.rx.main.fragments.profile.ShowValueRx;
 import com.mahdi.yumnote.ui.main.fragments.clicks.profile.ProfileClicks;
 import com.mahdi.yumnote.ui.main.fragments.clicks.profile.ProfileHelper;
 import java.io.IOException;
@@ -104,13 +101,10 @@ public class ProfileFragment extends Fragment {
 
 
 
-
-
         component.getShowValueRx().Showing(view, user, pass);
         component.getImageUploadRx().Fetching(view, user, pass);
 
-        new PhoneCustomDialog(view.getContext(),user,pass);
-        new PassCustomDialog(view.getContext(),user,pass);
+
 
 
         return view;
