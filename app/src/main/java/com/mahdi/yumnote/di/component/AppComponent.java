@@ -5,6 +5,8 @@ import com.mahdi.yumnote.di.other.DefaultFragment;
 import com.mahdi.yumnote.other.SliderView.Slider;
 import com.mahdi.yumnote.other.bottomnavigation.BottomNavigation;
 import com.mahdi.yumnote.rx.main.fragments.note.JsonDisplayRx;
+import com.mahdi.yumnote.rx.main.fragments.profile.ImageUploadRx;
+import com.mahdi.yumnote.rx.main.fragments.profile.ShowValueRx;
 
 import dagger.Component;
 
@@ -23,6 +25,10 @@ public interface AppComponent {
     Slider getSlider();
     JsonDisplayRx getJsonRx();
 
+
+//------------ProfileFragment------------
+    ShowValueRx getShowValueRx();
+    ImageUploadRx getImageUploadRx();
 
 
 

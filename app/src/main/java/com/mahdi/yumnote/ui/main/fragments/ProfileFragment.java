@@ -23,6 +23,8 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import com.mahdi.yumnote.R;
 import com.mahdi.yumnote.databinding.FragmentProfileBinding;
+import com.mahdi.yumnote.di.component.AppComponent;
+import com.mahdi.yumnote.di.component.DaggerAppComponent;
 import com.mahdi.yumnote.other.dialog.PassCustomDialog;
 import com.mahdi.yumnote.other.dialog.PhoneCustomDialog;
 import com.mahdi.yumnote.other.sharedpreferences.SharedPrefer;
@@ -39,6 +41,7 @@ import java.io.IOException;
 public class ProfileFragment extends Fragment {
 
 
+    private AppComponent component;
     private Bitmap bitmap;
     private Handler handler = new Handler();
     private int apiDelayed = 1000; //every 1 second = 1000 milisecond
@@ -65,6 +68,9 @@ public class ProfileFragment extends Fragment {
 
         user = preferences.ValueUser();
         pass = preferences.ValuePass();
+
+
+        component = DaggerAppComponent.create();
 //--------------------------------------------------------------------------------------
 
 
@@ -99,8 +105,9 @@ public class ProfileFragment extends Fragment {
 
 
 
-        new ShowValueRx().Showing(view, user, pass);
-        new ImageUploadRx().Fetching(view, user, pass);
+
+        component.getShowValueRx().Showing(view, user, pass);
+        component.getImageUploadRx().Fetching(view, user, pass);
 
         new PhoneCustomDialog(view.getContext(),user,pass);
         new PassCustomDialog(view.getContext(),user,pass);
@@ -142,9 +149,9 @@ public class ProfileFragment extends Fragment {
         handler.postDelayed(runnable = new Runnable() {
             public void run() {
 
+                component.getShowValueRx().Showing(view, user, pass);
+                component.getImageUploadRx().Fetching(view, user, pass);
 
-                new ImageUploadRx().Fetching(view, user, pass);
-                new ShowValueRx().Showing(view, user, pass);
 
                 handler.postDelayed(runnable, apiDelayed);
             }

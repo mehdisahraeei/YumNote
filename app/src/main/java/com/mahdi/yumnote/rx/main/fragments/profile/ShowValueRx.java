@@ -8,6 +8,9 @@ import com.mahdi.yumnote.R;
 import com.mahdi.yumnote.model.retrofit.api1.ProfileServer;
 import com.mahdi.yumnote.networking.retrofit.api.ApiServices1;
 import com.mahdi.yumnote.networking.retrofit.client.RetrofitClient;
+
+import javax.inject.Inject;
+
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Observable;
@@ -25,7 +28,7 @@ public class ShowValueRx {
     private TextView userDisplay,passDisplay,emailDisplay,phoneDisplay;
 
 
-
+    @Inject
     public ShowValueRx() {
     }
 

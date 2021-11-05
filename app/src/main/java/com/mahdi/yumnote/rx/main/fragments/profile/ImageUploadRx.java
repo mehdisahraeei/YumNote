@@ -16,6 +16,7 @@ import com.mahdi.yumnote.networking.retrofit.api.ApiServices1;
 import com.mahdi.yumnote.networking.retrofit.client.RetrofitClient;
 import java.io.ByteArrayOutputStream;
 import java.util.Calendar;
+import javax.inject.Inject;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.Observer;
@@ -31,6 +32,9 @@ public class ImageUploadRx {
     private ImageView profileDisplay;
 
 
+    @Inject
+    public ImageUploadRx() {
+    }
 
 
     public void Uploading(Bitmap bitmap, String user, String pass) {
