@@ -12,7 +12,6 @@ import com.mahdi.yumnote.R;
 import com.mahdi.yumnote.databinding.ActivityMainBinding;
 import com.mahdi.yumnote.di.component.AppComponent;
 import com.mahdi.yumnote.di.component.DaggerAppComponent;
-import com.mahdi.yumnote.other.bottomnavigation.BottomNavigation;
 
 
 
@@ -36,12 +35,12 @@ public class MainActivity extends AppCompatActivity {
 //--------------------------------------------------------------------------------------
 
 
-        BottomNavigation.getInstance().BottomMethod(view,
-                this, fragmentManager);
-
 
         AppComponent component = DaggerAppComponent.create();
+
         component.getInject().RunFragmnt(fragmentManager);
+        component.getNavigation().BottomMethod(view,
+                this, fragmentManager);
 
 
     }

@@ -11,6 +11,7 @@ import com.mahdi.yumnote.R;
 import com.mahdi.yumnote.ui.main.fragments.NoteFragment;
 import com.mahdi.yumnote.ui.main.fragments.ProfileFragment;
 
+import javax.inject.Inject;
 
 
 public class BottomNavigation {
@@ -21,19 +22,23 @@ public class BottomNavigation {
     private static BottomNavigation object = null;
 
 
-
-    private BottomNavigation() {
+    @Inject
+    public BottomNavigation() {
     }
 
 
 
 
+/*
+    using singleton
     public static BottomNavigation getInstance() {
         if (object == null) {
             object = new BottomNavigation();
         }
         return object;
     }
+
+*/
 
 
 
