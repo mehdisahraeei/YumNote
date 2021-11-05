@@ -15,6 +15,7 @@ import com.mahdi.yumnote.networking.retrofit.client.JsonClient;
 import com.mahdi.yumnote.other.recyclerview.adapters.CustomAdabter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.inject.Inject;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Observable;
@@ -34,15 +35,17 @@ public class JsonDisplayRx {
     private RecyclerView recyclerView;
 
 
+    @Inject
+    public JsonDisplayRx() {
+    }
+
 
     public JsonDisplayRx(View view) {
         this.view = view;
     }
 
 
-
-
-    public void jsoning() {
+    public void jsoning(View view) {
         ApiServices2 api = JsonClient.getApiServices();
         Observable<List<PosterModel>> observable = api.getListAll();
         observable.observeOn(AndroidSchedulers.mainThread())

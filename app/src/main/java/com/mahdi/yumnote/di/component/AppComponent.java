@@ -1,20 +1,25 @@
 package com.mahdi.yumnote.di.component;
 
 
-import com.mahdi.yumnote.di.Modules.ModuleFragment;
-import com.mahdi.yumnote.di.Modules.ModuleNavigation;
 import com.mahdi.yumnote.di.other.DefaultFragment;
+import com.mahdi.yumnote.other.SliderView.Slider;
 import com.mahdi.yumnote.other.bottomnavigation.BottomNavigation;
+import com.mahdi.yumnote.rx.main.fragments.note.JsonDisplayRx;
+
 import dagger.Component;
 
 
-
-@Component(modules = {ModuleFragment.class, ModuleNavigation.class})
+@Component
+//@Component(modules = {ModuleFragment.class, ModuleNavigation.class , ModuleSlider.class, ModuleJsonDisp.class})
 public interface AppComponent {
 
 
     DefaultFragment getInject();
 
     BottomNavigation getNavigation();
+
+    Slider getSlider();
+
+    JsonDisplayRx getJsonRx();
 
 }

@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.mahdi.yumnote.R;
 import com.mahdi.yumnote.databinding.FragmentNoteBinding;
-import com.mahdi.yumnote.other.SliderView.Slider;
-import com.mahdi.yumnote.rx.main.fragments.note.JsonDisplayRx;
+import com.mahdi.yumnote.di.component.AppComponent;
+import com.mahdi.yumnote.di.component.DaggerAppComponent;
 import com.mahdi.yumnote.ui.main.fragments.clicks.note.NoteClicks;
 
 
@@ -36,9 +36,10 @@ public class NoteFragment extends Fragment {
 //--------------------------------------------------------------------------------------
 
 
+        AppComponent component = DaggerAppComponent.create();
 
-        new Slider().Run(view);
-        new JsonDisplayRx(view).jsoning();
+        component.getSlider().Run(view);
+        component.getJsonRx().jsoning(view);
 
         return view;
     }

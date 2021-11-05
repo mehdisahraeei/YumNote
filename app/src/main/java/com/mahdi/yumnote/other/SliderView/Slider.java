@@ -10,7 +10,7 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.mahdi.yumnote.R;
 import java.util.HashMap;
-
+import javax.inject.Inject;
 
 
 public class Slider implements ViewPagerEx.OnPageChangeListener, BaseSliderView.OnSliderClickListener {
@@ -18,6 +18,10 @@ public class Slider implements ViewPagerEx.OnPageChangeListener, BaseSliderView.
 
     private SliderLayout mDemoSlider;
 
+
+    @Inject
+    public Slider() {
+    }
 
 
     public void Run(View view)
