@@ -1,8 +1,7 @@
 package com.mahdi.yumnote.networking.retrofit.client;
 
-import com.mahdi.yumnote.networking.retrofit.api.ApiServices1;
-import com.mahdi.yumnote.networking.retrofit.api.ApiServices2;
 
+import com.mahdi.yumnote.networking.retrofit.api.ApiServices2;
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
