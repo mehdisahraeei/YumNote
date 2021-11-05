@@ -82,38 +82,10 @@ public class ProfileClicks {
 
 
 
+
+
     public void ClickPass() {
-
         Toast.makeText(context, "soon", Toast.LENGTH_SHORT).show();
-
-        /*
-        ApiServices apiServices = RetrofitClient.getApiServices();
-        Observable<PasswordServer> observable = apiServices.ProfilePassword("333",user,pass);
-        observable.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<PasswordServer>() {
-                    @Override
-                    public void onSubscribe(@NonNull Disposable d) {
-
-                    }
-
-                    @Override
-                    public void onNext(@NonNull PasswordServer passwordServer) {
-
-                    }
-
-                    @Override
-                    public void onError(@NonNull Throwable e) {
-
-                    }
-
-                    @Override
-                    public void onComplete() {
-                        context.startActivity(new Intent(context,LoginActivity.class));
-                    }
-                });
-
-*/
     }
 
 
@@ -163,13 +135,10 @@ public class ProfileClicks {
 
 
     public void ClickPhone() {
-
-
-        PhoneCustomDialog dialog = new PhoneCustomDialog(context);
+        PhoneCustomDialog dialog = new PhoneCustomDialog(context, user, pass);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
-
     }
 
 

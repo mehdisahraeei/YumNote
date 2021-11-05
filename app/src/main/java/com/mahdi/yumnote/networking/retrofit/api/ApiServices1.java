@@ -55,10 +55,5 @@ public interface ApiServices1 {
 
 
 
-//    @FormUrlEncoded
-//    @POST("")
-//    Observable<PasswordServer> ProfilePassword(@Field("Passnew") String email , @Field("userPa") String user, @Field("passPa") String password);
-
-
 
 }

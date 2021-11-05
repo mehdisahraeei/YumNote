@@ -1,6 +1,8 @@
 package com.mahdi.yumnote.ui.main.fragments;
 
 
+
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -104,6 +106,7 @@ public class ProfileFragment extends Fragment {
 
 
 
+
     ActivityResultLauncher<Intent> resultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
         public void onActivityResult(ActivityResult result) {
@@ -146,11 +149,13 @@ public class ProfileFragment extends Fragment {
 
 
 
+
     @Override
     public void onPause() {
         super.onPause();
         handler.removeCallbacks(runnable); //stop handler when activity not visible
     }
+
 
 
 

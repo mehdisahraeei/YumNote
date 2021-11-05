@@ -27,6 +27,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 public class PhoneCustomDialog extends Dialog implements View.OnClickListener {
 
 
+
     private String user, pass;
     private String MainValue;
     private Context context;
@@ -36,19 +37,12 @@ public class PhoneCustomDialog extends Dialog implements View.OnClickListener {
 
 
 
-    public PhoneCustomDialog(@androidx.annotation.NonNull Context context, String user, String pass) {
+    public PhoneCustomDialog(Context context, String user, String pass) {
         super(context);
+        this.context = context;
         this.user = user;
         this.pass = pass;
     }
-
-
-
-    public PhoneCustomDialog(Context context) {
-        super(context);
-        this.context = context;
-    }
-
 
 
     @Override
@@ -73,10 +67,10 @@ public class PhoneCustomDialog extends Dialog implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.image_phone_dialog:
 
-                MainValue =phoneEdit.getText().toString();
-
+                MainValue = phoneEdit.getText().toString();
                 ShowDialog();
-                SendPhoneProfile(MainValue);
+                PhoneProfileApi(MainValue);
+
                 dialog.dismiss();
                 break;
         }
@@ -86,8 +80,7 @@ public class PhoneCustomDialog extends Dialog implements View.OnClickListener {
 
 
     private void ShowDialog() {
-
-        dialog = new PhoneCustomDialog(context);
+        dialog = new PhoneCustomDialog(context, user, pass);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
@@ -96,11 +89,13 @@ public class PhoneCustomDialog extends Dialog implements View.OnClickListener {
 
 
 
-    private void SendPhoneProfile(String s)
-    {
 
+
+
+    private void PhoneProfileApi(String phone)
+    {
         ApiServices1 apiServices = RetrofitClient.getApiServices();
-        Observable<PhoneServer> observable = apiServices.SendPhoneProfile(s, user, pass);
+        Observable<PhoneServer> observable = apiServices.SendPhoneProfile(MainValue, user, pass);
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<PhoneServer>() {
@@ -112,10 +107,12 @@ public class PhoneCustomDialog extends Dialog implements View.OnClickListener {
 
                     @Override
                     public void onNext(PhoneServer phoneServer) {
+                        Toast.makeText(context, "phone number is updated", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onError(@NonNull Throwable e) {
+                        Toast.makeText(context, "Error: there is a wrong", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -124,8 +121,6 @@ public class PhoneCustomDialog extends Dialog implements View.OnClickListener {
                     }
                 });
     }
-
-
 
 
 }

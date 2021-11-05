@@ -35,6 +35,8 @@
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_setting.xml" value="0.15" />
         <entry key="app/src/main/res/layout/layout_bottom_sheet.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/password_dialog.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/phone_dialog.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.15462962962962962" />
       </map>
     </option>
