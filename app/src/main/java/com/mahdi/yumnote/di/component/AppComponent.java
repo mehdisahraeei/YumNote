@@ -7,12 +7,11 @@ import com.mahdi.yumnote.other.bottomnavigation.BottomNavigation;
 import com.mahdi.yumnote.rx.main.fragments.note.JsonDisplayRx;
 import com.mahdi.yumnote.rx.main.fragments.profile.ImageUploadRx;
 import com.mahdi.yumnote.rx.main.fragments.profile.ShowValueRx;
-
 import dagger.Component;
 
 
 @Component
-//@Component(modules = {ModuleFragment.class, ModuleNavigation.class , ModuleSlider.class, ModuleJsonDisp.class})
+//@Component(modules = {ModuleFragment.class, ModuleNavigation.class , other Classmodules})
 public interface AppComponent {
 
 

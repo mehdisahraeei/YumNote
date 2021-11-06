@@ -78,7 +78,7 @@ public class BottomSheet extends Dialog {
             itemContainer.addView(row,i);
             LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) row.getLayoutParams();
             params.width = LinearLayout.LayoutParams.MATCH_PARENT;
-            params.height = DensityUtils.dip2px(context,110);
+            params.height = new DensityUtils().dip2px(context,110);
             row.setLayoutParams(params);
             row.setOrientation(LinearLayout.HORIZONTAL);
 
@@ -107,9 +107,9 @@ public class BottomSheet extends Dialog {
                     ImageView icon = new ImageView(context);
                     rl.addView(icon);
                     RelativeLayout.LayoutParams iconParam = (RelativeLayout.LayoutParams) icon.getLayoutParams();
-                    iconParam.width = DensityUtils.dip2px(context,45);
-                    iconParam.height = DensityUtils.dip2px(context,45);
-                    iconParam.topMargin = DensityUtils.dip2px(context,16);
+                    iconParam.width = new DensityUtils().dip2px(context,45);
+                    iconParam.height = new DensityUtils().dip2px(context,45);
+                    iconParam.topMargin = new DensityUtils().dip2px(context,16);
                     iconParam.addRule(RelativeLayout.CENTER_HORIZONTAL);
                     icon.setLayoutParams(iconParam);
                     icon.setId(index);
@@ -122,7 +122,7 @@ public class BottomSheet extends Dialog {
                     descParam.height = RelativeLayout.LayoutParams.WRAP_CONTENT;
                     descParam.addRule(RelativeLayout.CENTER_HORIZONTAL);
                     descParam.addRule(RelativeLayout.BELOW,icon.getId());
-                    descParam.topMargin = DensityUtils.dip2px(context,12);
+                    descParam.topMargin = new DensityUtils().dip2px(context,12);
                     desc.setLayoutParams(descParam);
                     desc.setTextSize(15);
                     desc.setText(item.name);
