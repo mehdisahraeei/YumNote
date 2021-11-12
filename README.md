@@ -6,6 +6,21 @@
 ### step1
 add the dependency in your build.gradle.
 
+
+
+```
+
+    //adding--for--binding
+    dataBinding
+            {
+                enabled = true
+            }
+
+```
+
+
+
+
 ```
     //default
     implementation 'androidx.appcompat:appcompat:1.2.0'
