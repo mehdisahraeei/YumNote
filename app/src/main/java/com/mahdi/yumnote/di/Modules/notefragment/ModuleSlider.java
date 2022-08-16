@@ -5,7 +5,6 @@ import com.mahdi.yumnote.other.SliderView.Slider;
 import dagger.Module;
 import dagger.Provides;
 
-
 @Module
 public class ModuleSlider {
 

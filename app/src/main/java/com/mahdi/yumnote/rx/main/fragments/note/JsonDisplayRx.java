@@ -40,10 +40,6 @@ public class JsonDisplayRx {
     }
 
 
-    public JsonDisplayRx(View view) {
-        this.view = view;
-    }
-
 
     public void jsoning(View view) {
         ApiServices2 api = JsonClient.getApiServices();
@@ -65,7 +61,7 @@ public class JsonDisplayRx {
                         recyclerView.setAdapter(adabter);
 
 
-                        Clicking();
+                        Clicking(view);
                     }
 
                     @Override
@@ -84,7 +80,7 @@ public class JsonDisplayRx {
 
 
 
-    public void Clicking()
+    public void Clicking(View vc)
     {
         adabter.setOnItemClickListener(new CustomAdabter.ClickListener() {
             @Override
@@ -92,21 +88,21 @@ public class JsonDisplayRx {
                 switch (position)
                 {
                     case 0:
-                        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://login.wordpress.org")));
+                        vc.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://login.wordpress.org")));
                         break;
                     case 1:
-                        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.codechef.com")));
+                        vc.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.codechef.com")));
                         break;
                     case 2:
-                        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.base64encode.org")));
+                        vc.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://www.base64encode.org")));
                         break;
 
                     case 3:
-                        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://developer.android.com")));
+                        vc.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://developer.android.com")));
                         break;
 
                     case 4:
-                        view.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://stackoverflow.com")));
+                        vc.getContext().startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://stackoverflow.com")));
                         break;
 
                 }

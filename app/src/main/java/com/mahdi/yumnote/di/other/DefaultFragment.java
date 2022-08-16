@@ -10,7 +10,6 @@ import javax.inject.Inject;
 
 
 
-
 public class DefaultFragment {
 
     @Inject

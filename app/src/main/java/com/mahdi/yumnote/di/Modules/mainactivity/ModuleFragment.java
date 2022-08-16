@@ -1,9 +1,9 @@
 package com.mahdi.yumnote.di.Modules.mainactivity;
 
+
 import com.mahdi.yumnote.di.other.DefaultFragment;
 import dagger.Module;
 import dagger.Provides;
-
 
 
 @Module
