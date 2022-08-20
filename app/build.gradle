@@ -24,6 +24,15 @@ android {
 
 
     buildTypes {
+
+        def SERVER_URL1 = "SERVER1",SERVER_URL2 ="SERVER2"
+
+        debug {
+            buildConfigField "String", SERVER_URL1, url_json
+            buildConfigField "String", SERVER_URL2, url_retrofit
+        }
+
+
         packagingOptions {
             exclude 'META-INF/rxjava.properties'
         }
